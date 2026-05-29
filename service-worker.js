@@ -20,7 +20,7 @@
   └─────────────────────────────────────────────────────────────────────┘
 */
 
-const CACHE_VERSION = "trunfo-egipcio-v1";
+const CACHE_VERSION = "trunfo-egipcio-v2";
 
 // Lista de tudo que precisa ser guardado para o jogo rodar offline.
 const ARQUIVOS = [
@@ -29,6 +29,8 @@ const ARQUIVOS = [
   "style.css",
   "script.js",
   "cards.js",
+  "musica-fundo.mp3",
+  "musica-fundo.ogg",
   "manifest.json",
   "icon-192.png",
   "icon-512.png",

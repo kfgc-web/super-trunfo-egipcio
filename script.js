@@ -227,3 +227,25 @@ document.querySelectorAll(".btn-attr").forEach(btn => {
     }
   });
 });
+
+// ====== Música de fundo (começa DESLIGADA) ======
+// O jogo abre em silêncio. O navegador bloqueia áudio que toca sozinho, mas
+// o clique do jogador NESTE botão já é o "gesto" que libera o som — por isso
+// a música só começa quando ele toca aqui pela primeira vez. Depois, cada
+// clique alterna entre ligar e desligar (pausa, sem perder a posição).
+const musicaFundo = document.getElementById("musica-fundo");
+const btnSom = document.getElementById("btn-som");
+
+btnSom.addEventListener("click", () => {
+  if (musicaFundo.paused) {
+    musicaFundo.play().catch(() => {}); // liga (ou retoma) em loop
+    btnSom.textContent = "🔊";
+    btnSom.setAttribute("aria-label", "Desligar a música");
+    btnSom.setAttribute("title", "Música: ligada");
+  } else {
+    musicaFundo.pause();                 // desliga, mantendo a posição
+    btnSom.textContent = "🔇";
+    btnSom.setAttribute("aria-label", "Ligar a música");
+    btnSom.setAttribute("title", "Música: desligada");
+  }
+});

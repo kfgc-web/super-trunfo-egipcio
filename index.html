@@ -19,6 +19,15 @@
 </head>
 <body>
 
+  <!-- Música de fundo (toca em loop). Dois formatos: MP3 para iPhone/Safari, OGG de reserva. -->
+  <audio id="musica-fundo" loop preload="auto">
+    <source src="musica-fundo.mp3" type="audio/mpeg" />
+    <source src="musica-fundo.ogg" type="audio/ogg" />
+  </audio>
+
+  <!-- Botão de som: fixo no canto superior direito, visível em todas as telas. Começa desligado. -->
+  <button id="btn-som" type="button" aria-label="Ligar a música" title="Música: desligada">🔇</button>
+
   <!-- TELA INICIAL -->
   <section id="tela-inicial" class="tela ativa">
     <h1>Super Trunfo Egípcio</h1>
